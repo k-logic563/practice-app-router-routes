@@ -24,11 +24,11 @@ export default function RootLayout({
       <body>
         <MantineProvider>
           <header className="bg-teal-600 text-white">
-            <div className="container mx-auto py-3">
+            <div className="container mx-auto p-4">
               <Link className="font-bold text-2xl" href="/">Dog is cute</Link>
             </div>
           </header>
-          <div className="container mx-auto py-8">
+          <div className="container mx-auto px-5 py-8">
             {children}
           </div>
           {modal}

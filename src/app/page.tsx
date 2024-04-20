@@ -25,16 +25,16 @@ const formatDogProps = (dogImages: string[]): FormatDogProps[] => {
 }
 
 export default async function DogsPage () {
-  const dogs = await fetch ('https://dog.ceo/api/breeds/image/random/12');
+  const dogs = await fetch ('https://dog.ceo/api/breeds/image/random/24');
   const body = await dogs.json() as DogProps;
   const formatDogItems = formatDogProps(body.message)
   return (
     <section>
-      <ul className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <ul className="columns-2 sm:columns-3 lg:columns-4">
         { formatDogItems.map(item => (
-          <li key={item.id}>
+          <li key={item.id} className="mb-4">
             <Link href={`dogs/${item.breed}/${item.id}`} className="hover:opacity-60">
-              <img src={item.url} alt="" />
+              <img className="rounded-lg" src={item.url} alt="" />
             </Link>
           </li>
         )) }
