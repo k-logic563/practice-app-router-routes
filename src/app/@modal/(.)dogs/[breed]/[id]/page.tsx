@@ -23,7 +23,7 @@ export default function DogsDetailPage ({ params }: Params) {
 
   return (
     <Modal opened={opened} onClose={handleClickClose} centered>
-      <img className="max-w-sm mx-auto" src={`https://images.dog.ceo/breeds/${params.breed}/${params.id}.jpg`} alt="" />
+      <img className="sm:max-w-sm mx-auto" src={`https://images.dog.ceo/breeds/${params.breed}/${params.id}.jpg`} alt="" />
     </Modal>
   )
 }
