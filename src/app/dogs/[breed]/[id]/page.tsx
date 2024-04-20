@@ -8,7 +8,6 @@ type Params = {
 export default async function DogDetailPage ({ params }: Params) {
   return (
     <section>
-      <h1 className="font-bold text-xl mb-4">Dog Detail</h1>
       <ul className="mb-4">
         <li>Breed: {params.breed}</li>
       </ul>

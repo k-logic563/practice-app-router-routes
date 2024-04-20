@@ -1,11 +1,12 @@
 import '@mantine/core/styles.css';
 import './globals.css';
 
+import Link from 'next/link';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 
 export const metadata = {
-  title: 'App router routes practice',
-  description: 'App router routes practice',
+  title: 'Dog is cute',
+  description: 'Dog is cute',
 };
 
 export default function RootLayout({
@@ -22,7 +23,14 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider>
-          {children}
+          <header className="bg-teal-600 text-white">
+            <div className="container mx-auto py-3">
+              <Link className="font-bold text-2xl" href="/">Dog is cute</Link>
+            </div>
+          </header>
+          <div className="container mx-auto py-8">
+            {children}
+          </div>
           {modal}
         </MantineProvider>
       </body>
